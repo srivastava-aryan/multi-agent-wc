@@ -14,7 +14,7 @@ export async function criticAgent(task: string, draft: string): Promise<Critique
   const prompt = `Task: ${task}
 Draft: ${draft}
 
-Score this draft from 1-10 on how well it fulfills the task. Give specific, actionable feedback for improvement. Set approved to true only if score is 8 or higher.
+Score this draft from 1-10 on how well it fulfills the task. Give specific, actionable feedback for improvement. Be a harsh critic. Set approved to true only if score is 9.5 or higher.
 
 Respond with ONLY valid JSON in this exact shape, no markdown fences, no extra text:
 {"score": <number>, "feedback": "<string>", "approved": <boolean>}`;
